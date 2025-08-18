@@ -1,0 +1,103 @@
+@import 'meyer-reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Text:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+li {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+}
+
+:root {
+    --step--2: clamp(0.7813rem, 0.7736rem + 0.0341vw, 0.8rem);
+    --step--1: clamp(0.9375rem, 0.9119rem + 0.1136vw, 1rem);
+    --step-0: clamp(1.125rem, 1.0739rem + 0.2273vw, 1.25rem);
+    --step-1: clamp(1.35rem, 1.2631rem + 0.3864vw, 1.5625rem);
+    --step-2: clamp(1.62rem, 1.4837rem + 0.6057vw, 1.9531rem);
+    --step-3: clamp(1.944rem, 1.7405rem + 0.9044vw, 2.4414rem);
+    --step-4: clamp(2.3328rem, 2.0387rem + 1.3072vw, 3.0518rem);
+    --step-5: clamp(2.7994rem, 2.384rem + 1.8461vw, 3.8147rem);
+
+    --primary-background-color: #1f2937;
+    
+    --primary-text-color: #f9faf8;
+    --secondary-text-color: #e5e7eb;
+}
+
+.primary-font {
+    border: 2px solid red;
+    font-size: var(--step-5);
+    margin-bottom: 3rem;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.secondary-font {
+    font-size: var(--step-4);
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.tertiary-font {
+    font-size: var(--step-1);
+    color: var(--secondary-text-color);
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* NAVBAR ================================================== */
+
+.container-header {
+    background-color: var(--primary-background-color);
+    padding: 2.5em 2em;
+}
+
+.navbar {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+.header-logo {
+        color: var(--primary-text-color)
+}
+
+.links {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 50%;
+    min-height: 6em;
+}
+
+.link {
+    color: var(--secondary-text-color)
+}
+
+/* NAVBAR ============================================= */
+
+.header {
+    flex-direction: column;
+    align-content:baseline
+}
+
+.header-title {
+    border: 2px solid red;
+    color: var(--primary-text-color);
+    text-align: center;
+    justify-content: center;
+}
+
+.header-p {
+    margin-top: 0;
+    justify-content: center;
+}
