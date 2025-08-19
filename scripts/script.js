@@ -7,33 +7,67 @@ hamMenu.addEventListener('click', () => {
     offScreenMenu.classList.toggle('active');
 })
 
-{
-    const nav = document.querySelector(".navbar");
-    let lastScrollY = window.scrollY;
+// {
+//     const nav = document.querySelector(".navbar");
+//     let lastScrollY = window.scrollY;
 
-    let menu = document.querySelector(".off-screen-menu");
-    let isMenuOpen = menu.classList.contains('active');
+//     let menu = document.querySelector(".off-screen-menu");
+//     let isMenuOpen = menu.classList.contains("active");
 
-    window.addEventListener('scroll', () => {
-        if (lastScrollY < window.scrollY) {
-            console.log(isMenuOpen)
-            nav.classList.add("nav-hidden");
-            console.log("going down");
-            console.log(lastScrollY)
+//     if (lastScrollY === window.scrollY) {
+//         console.log("equal");
+//     }
 
-        } else {
+//     window.addEventListener('scroll', () => {
+//         if (lastScrollY < window.scrollY) {
+//             nav.classList.add("nav-hidden");
+//             console.log("going down");
+//             console.log(lastScrollY)
 
-            nav.classList.remove("nav-hidden");
-            console.log("going up");
-            console.log(lastScrollY)
+//         } else {
 
-        }
-    })
+//             nav.classList.remove("nav-hidden");
+//             console.log("going up");
+//             console.log(lastScrollY)
 
-    lastScrollY = window.scrollY;
-    console.log(lastScrollY)
+//         }
+//     })
 
-    if (window.scrollY <= 0 || isMenuOpen) {
-        nav.classList.remove("nav-hidden");
-    }
-}
+//     lastScrollY = window.scrollY;
+//     console.log("is menu open: " + isMenuOpen)
+
+
+
+//     if (window.scrollY <= 0 || isMenuOpen) {
+//         nav.classList.remove("nav-hidden");
+//     }
+// }
+
+let lastScrollTop = 0;
+let nav = document.querySelector(".navbar");
+const navHeight = nav.offsetHeight;
+let navMenu = document.querySelector(".off-screen-menu");
+let isMenuOpen = navMenu.classList.contains("active");
+
+// element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
+window.addEventListener("scroll", function(){ 
+
+    // do not close navbar if side menu is open
+    isMenuOpen = navMenu.classList.contains("active"); 
+    if (isMenuOpen) {
+    return;
+   }
+   
+   let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+   if (currentScrollTop > lastScrollTop) {
+      nav.classList.add("nav-hidden")
+   } else if (currentScrollTop < lastScrollTop) {
+      nav.classList.remove("nav-hidden")
+   } // else was horizontal scroll
+   lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
+
+
+   if (this.window.scrollY <= navHeight) {
+    nav.classList.remove("nav-hidden");
+   }
+}, false);
