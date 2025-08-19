@@ -63,6 +63,18 @@ li {
 .navbar {
     justify-content: space-between;
     /* border: 2px solid red; */
+    background-color: var(--primary-background-color);
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1rem;   
+    position: sticky;
+    top: 0;
+    transition: transform 0.2s;
+    
+}
+
+.nav-hidden {
+    transform: translate(0, -100%);
 }
 
 .header-logo {
@@ -78,7 +90,7 @@ li {
 .off-screen-menu {
     height: 100vh;
     width: 100vw;
-    max-width: 300px;
+    max-width: 50%;
     position: fixed;
     top: 0;
     right: -450px;
@@ -90,6 +102,8 @@ li {
     text-align: center;
     transition: .3s ease;
     background-color: var(--primary-background-color);
+    border-left: var(--secondary-text-color);
+    padd
 }
 
 .off-screen-menu.active {
@@ -100,19 +114,19 @@ li {
     /* border: 2px solid greenyellow; */
     height: 50px;
     width: 50px;
-    position: relative;
+
 }
 
 .ham-menu span {
     position: absolute;
     /* border: 2px solid red; */
     height: 5px;
-    width: 100%;
+    width: 50px;
     color: white;
     border-radius: 25px;
     top: 50%;
-    margin-top: -5px;
     background-color: var(--secondary-text-color);
+
 }
 
 .ham-menu span:nth-child(1) {
@@ -125,7 +139,8 @@ li {
 
 /* .ham-menu.active span:nth-child(1) {
     top: 50%;
-    translate(-50%,-50%) rotate(45deg);
+    transform: translate(-50%,-50%) rotate(45deg);
+    
 }
 
 .ham-menu.active span:nth-child(2) {
@@ -133,7 +148,7 @@ li {
 }
 
 .ham-menu.active span:nth-child(3) {
-    top: 50%;
+    top: 40%;
     transform: translate(-50%, 50%) rotate(-45deg);
 } */
 
@@ -149,26 +164,28 @@ li {
 .link {
     color: var(--secondary-text-color);
     text-decoration: none;
+    margin-top: 2rem;
 }
+
 
 /* HEADER ============================================= */
 
 .header {
     flex-direction: column;
     align-content:baseline;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
 }
 
 .header-title {
     color: var(--primary-text-color);
     text-align: center;
     justify-content: center;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     margin-bottom: .75rem;
 }
 
 .header-p {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     margin-top: 0;
     justify-content: center;
 }
