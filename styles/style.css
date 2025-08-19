@@ -30,6 +30,11 @@ li {
     
     --primary-text-color: #f9faf8;
     --secondary-text-color: #e5e7eb;
+    --button-background-color: #3882f6;
+}
+
+button {
+    background-color: var(--button-background-color);
 }
 
 .primary-font {
@@ -178,7 +183,9 @@ li {
 .header {
     flex-direction: column;
     align-content:baseline;
+    align-items: center;
     margin-top: 1.5rem;
+    /* border: 2px solid red; */
 }
 
 .header-title {
@@ -186,11 +193,24 @@ li {
     text-align: center;
     justify-content: center;
     /* border: 2px solid red; */
-    margin-bottom: .75rem;
+    margin-bottom: 1rem;
 }
 
 .header-p {
     /* border: 2px solid red; */
     margin-top: 0;
     justify-content: center;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.sign-up-button {
+    border-radius: 25px;
+    justify-content:  center;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: var(--secondary-text-color);
+    padding: .75rem 0;
 }
