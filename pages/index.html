@@ -4,19 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
+    <script src="../scripts/script.js" defer></script>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
     <div class="container-header">
 
-
-
-        <nav class="navbar flex">
-            <h1 class="header-logo primary-font">
-                Header Logo
-            </h1>
-
-        <ul class=" links flex secondary-font">
+        <ul class="off-screen-menu links flex secondary-font">
             <a href="link-1" class="link">
                 Link 1
             </a>
@@ -27,7 +21,32 @@
                 Link 3  
             </a>
         </ul>
-        
+
+
+        <nav class="navbar flex">
+            <h1 class="header-logo secondary-font">
+                Header Logo
+            </h1>
+
+            <div class="ham-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- <ul class="nav-menu links flex secondary-font">
+                <a href="link-1" class="link">
+                    Link 1
+                </a>
+                <a href="link-2" class="link">
+                    Link 2
+                </a>
+                <a href="link-2" class="link">
+                    Link 3  
+                </a>
+            </ul> -->
+        </nav>
+
         <header class="header flex">
             <h1 class="header-title primary-font flex">
                 This Website is <br>Awesome
