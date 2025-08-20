@@ -27,11 +27,11 @@ li {
     --step-5: clamp(2.7994rem, 2.384rem + 1.8461vw, 3.8147rem);
 
     --primary-background-color: #1f2937;
+    --button-background-color: #3882f6;
     
     --primary-text-color: #f9faf8;
     --secondary-text-color: #e5e7eb;
     --sub-primary-text-color: #1f2937;
-    --button-background-color: #3882f6;
 }
 
 button {
@@ -290,4 +290,28 @@ button {
     text-align: center;
     color: black;
     margin-bottom: 1rem;
+}
+
+/* QUOTE ========================================================== */
+
+.container-section-2 {
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary-text-color);
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.quote {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 1rem;
+    color: var(--sub-primary-text-color);
+}
+
+.quote-author {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
 }
