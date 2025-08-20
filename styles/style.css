@@ -320,9 +320,8 @@ button {
 /* SECTION 3 ============================================================== */
 
 .container:has(.container-section-3) {
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: var(--button-background-color);
+    justify-self: center;
+    padding: 0;
 }
 
 
@@ -330,20 +329,32 @@ button {
     flex-wrap: wrap;
     justify-content: center;
     background-color: var(--button-background-color);
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 .section-3-title {
     color: var(--secondary-text-color);
     justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
     /* border: 2px solid red; */
 }
 
 .call-to-action {
     flex-direction: column;
     text-align: center;
+    margin-bottom: 1rem;
+}
+
+.call-to-action-p {
+    font-weight: 300;
 }
 
 .container-section-3 .sign-up-button {
     border: 2px solid var(--primary-text-color);
-    width: 300px
+    width: 300px;
+    height:fit-content;
+    justify-self: center;
+    align-self: center;
 }
