@@ -153,14 +153,6 @@ button {
     top: 75%;
 }
 
-.ham-menu.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.ham-menu.active span:nth-child(3) {
-    top: 40%;
-    transform: translate(-50%, 50%) rotate(-45deg);
-} */
 
 .link {
     color: var(--secondary-text-color);
@@ -420,9 +412,24 @@ button {
         max-width: 899px;
     }
 
+    .container-section-2 {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    .quote {
+        font-size: var(--step-2);
+        width: 75%;
+    }
+
+    .quote-author {
+        font-size: var(--step-2);
+    }
+
     .container:has(.container-section-3) {
         padding: 2rem;
         justify-content: center;
+        width: 80%;
     }
 
     .container-section-3 {
@@ -433,6 +440,7 @@ button {
 
     .call-to-action {
         width: 60%;
+        margin-right: 3rem;
     }
 
     .footer {
@@ -440,12 +448,23 @@ button {
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
     }
+    
 
-    .sign-up-button {
-        align-self: flex-start;
-        width: 100%;
+
+}
+
+@media (min-width: 1126px) {
+    .card-list {
+        border: 2px solid red;
+        max-width: 100%;
     }
 
+    .card {
+        max-width: 175px;
+    }
+    
+    .card-img {
+        height: 175px;
+    }
 }
 
-}
