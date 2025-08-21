@@ -94,7 +94,7 @@ button {
     padding-top: 1rem;   
     position: sticky;
     top: 0;
-    transition: transform 0.25s;
+    transition: transform 0.25s ease;
 }
 
 .nav-hidden {
@@ -111,22 +111,23 @@ button {
 .off-screen-menu {
     margin-top: 1rem;
     height: auto;
-    position: fixed;
+    position: absolute;
     top: 0;
-    right: -100%;
+    top: -1000%;
+    right: 0;
     display: flex;
     flex-direction: column;
     align-content: center;
     align-items: center;
     text-align: center;
-    transition: .3s ease;
+    transition: .5s ease;
     background-color: var(--primary-background-color);
     padding: 2rem;
     border-radius: 10px;
 }
 
 .off-screen-menu.active {
-    right: 0;
+    top: 0;
 }
 
 .ham-menu {
@@ -162,7 +163,8 @@ button {
 }
 
 .link:hover {
-    color:white
+    color:white;
+    font-weight: 300;
 }
 
 
@@ -206,6 +208,12 @@ button {
     font-family: 'Roboto', sans-serif;
     color: var(--secondary-text-color);
     padding: .75rem 0;
+    border: 2px solid var(--primary-text-color);
+    transition: filter 0.3s ease;
+}
+
+.sign-up-button:hover {
+    filter: brightness(80%);
 }
 
 .header-image-1 {
@@ -455,7 +463,6 @@ button {
 
 @media (min-width: 1126px) {
     .card-list {
-        border: 2px solid red;
         max-width: 100%;
     }
 

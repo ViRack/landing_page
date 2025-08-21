@@ -7,41 +7,7 @@ hamMenu.addEventListener('click', () => {
     offScreenMenu.classList.toggle('active');
 })
 
-// {
-//     const nav = document.querySelector(".navbar");
-//     let lastScrollY = window.scrollY;
-
-//     let menu = document.querySelector(".off-screen-menu");
-//     let isMenuOpen = menu.classList.contains("active");
-
-//     if (lastScrollY === window.scrollY) {
-//         console.log("equal");
-//     }
-
-//     window.addEventListener('scroll', () => {
-//         if (lastScrollY < window.scrollY) {
-//             nav.classList.add("nav-hidden");
-//             console.log("going down");
-//             console.log(lastScrollY)
-
-//         } else {
-
-//             nav.classList.remove("nav-hidden");
-//             console.log("going up");
-//             console.log(lastScrollY)
-
-//         }
-//     })
-
-//     lastScrollY = window.scrollY;
-//     console.log("is menu open: " + isMenuOpen)
-
-
-
-//     if (window.scrollY <= 0 || isMenuOpen) {
-//         nav.classList.remove("nav-hidden");
-//     }
-// }
+// Hide menu when scrolling down - show when scrolling up
 
 let lastScrollTop = 0;
 let nav = document.querySelector(".navbar");
